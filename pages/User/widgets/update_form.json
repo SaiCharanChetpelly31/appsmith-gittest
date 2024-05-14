@@ -59,11 +59,12 @@
         {"key": "schema.__root_schema__.children.date_of_birth.defaultValue"},
         {"key": "isVisible"},
         {"key": "borderRadius"},
-        {"key": "onSubmit"}
+        {"key": "onSubmit"},
+        {"key": "sourceData"}
     ],
     "displayName": "JSON Form",
     "iconSVG": "/static/media/icon.6bacf7df.svg",
-    "onSubmit": "{{UpdateQuery.run(() => SelectQuery.run(), (error) => showAlert(`Error while updating resource!\\n ${error}`,'error'))}}",
+    "onSubmit": "{{Insert_user1.run(() => {\n            showAlert(\"undefined\");\n            \n          }, () => {\n            showAlert(\"Unable to create!\");\n          })}}",
     "topRow": 0,
     "bottomRow": 89,
     "fieldLimitExceeded": false,
@@ -93,7 +94,7 @@
         {"key": "schema.__root_schema__.children.name.accentColor"}
     ],
     "borderWidth": "0",
-    "sourceData": "{{_.omit(data_table.selectedRow, \"customColumn1\", \"__originalIndex__\", \"id\")}}",
+    "sourceData": {"name": ""},
     "showReset": true,
     "resetButtonLabel": "Reset",
     "key": "h9l9ozr8op",
