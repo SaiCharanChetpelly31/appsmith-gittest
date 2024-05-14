@@ -1,0 +1,4 @@
+INSERT INTO user (
+	name)
+VALUES (
+	'{{insert_form.formData.name}}');
